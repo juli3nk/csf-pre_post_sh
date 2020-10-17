@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 CSFPRED_PATH="/usr/local/include/csf/pre.d"
 

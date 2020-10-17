@@ -45,18 +45,6 @@ function copy_script {
 	chmod 700 ${csf_dst_path}
 }
 
-# Verify /bin/bash is linked to /bin/sh
-shell="bash"
-sh_shell=`ls -l /bin/sh | awk '{ print $NF }'`
-
-if [ ${sh_shell} != ${shell} -a ${sh_shell} != "/bin/${shell}" ]; then
-	echo "** Critical! **"
-	echo "/bin/sh is not linked to /bin/${shell}. Yours is ${sh_shell}."
-	echo "Only /bin/${shell} is supported"
-
-	exit 1
-fi
-
 # Create directories needed for custom csf{pre,post}
 if [ ! -d ${CSFPRED_PATH} ]; then
 	mkdir -p ${CSFPRED_PATH}
