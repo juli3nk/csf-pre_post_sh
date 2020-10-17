@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 CSFPOSTD_PATH="/usr/local/include/csf/post.d"
 
